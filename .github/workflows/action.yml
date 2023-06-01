@@ -1,0 +1,20 @@
+on:
+    push:
+    workflow_dispatch:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+        - name: test
+          id: test
+          uses: kenichiro-kimura/sample-github-container-action@d1196763aad0e352456a9d797d9a8e82828d26c1
+          with:
+            id_of_input: 'input value 1'
+            id_of_input2: 'input value 2'
+        - name: view result
+          run: |
+            echo ${{ env.id_of_output }}
+            echo ${{ env.id_of_output2 }}
+          env:
+            id_of_output: ${{ steps.test.outputs.id_of_output }}
+            id_of_output2: ${{ steps.test.outputs.id_of_output2 }}
