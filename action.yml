@@ -1,0 +1,25 @@
+name: 'sample-container-action`
+description: 'sample container action'
+branding:
+  icon: upload-cloud
+  color: blue
+inputs:
+  id_of_input: # 入力値のID
+    description: '入力値の説明'
+    required: true # 必須かどうか
+    default: 'default value' # デフォルト値
+  id_of_input2: # 入力値のID
+    description: '入力値の説明'
+    required: true # 必須かどうか
+    default: 'default value 2' # デフォルト値
+outputs:
+  id_of_output: # 出力値のID
+    description: '出力値の説明'
+  id_of_output2: # 出力値のID
+    description: '出力値の説明'
+runs:
+  using: 'docker'
+  image: 'Dockerfile' # 実行するコンテナのDockerfile
+  env:
+    ID_OF_INPUT: ${{ inputs.id_of_input }} # 入力値を環境変数に渡す
+    ID_OF_INPUT2: ${{ inputs.id_of_input2 }} # 入力値を環境変数に渡す
