@@ -12,5 +12,5 @@ fi
 
 echo "id_of_output=${ID_OF_INPUT}" >> "${GITHUB_OUTPUT}"
 echo "id_of_output2=${ID_OF_INPUT2}" >> "${GITHUB_OUTPUT}"
-echo "::add-mask::${ID_OF_INPUT2}" >> "${GITHUB_OUTPUT}"
 cat "${GITHUB_OUTPUT}"
+echo "::add-mask::${ID_OF_INPUT2}"
