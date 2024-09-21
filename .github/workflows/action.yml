@@ -7,7 +7,7 @@ jobs:
     steps:
         - name: test
           id: test
-          uses: kenichiro-kimura/sample-github-container-action@f98456fc02cc447d2261b3099f6b78a2605f3fd3
+          uses: kenichiro-kimura/sample-github-container-action@0e409df16048b8f2cc95a430d1126c3d3ea3ebb3
           with:
             id_of_input: 'input value 1'
             id_of_input2: 'input value 2'
